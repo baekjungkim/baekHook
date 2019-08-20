@@ -1,7 +1,21 @@
-# Usage
+# @bhooks/use-tabs
+
+React Hook to easy tab use
+
+## Installation
+
+#### yarn
+
+`yarn add @bhooks/use-tabs`
+
+#### npm
+
+`npm i @bhooks/use-tabs`
+
+## usage
 
 ```js
-import useTabs from "@bhook/use-tabs"
+import useTabs from "@bhooks/use-tabs"
 
 const content = [
   {

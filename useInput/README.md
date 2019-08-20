@@ -1,7 +1,21 @@
-# Usage
+# @bhooks/use-input
+
+React Hook to check input validation
+
+## Installation
+
+#### yarn
+
+`yarn add @bhooks/use-input`
+
+#### npm
+
+`npm i @bhooks/use-input`
+
+## usage
 
 ```js
-import useInput from "@bhook/use-input"
+import useInput from "@bhooks/use-input"
 
 const App = () => {
   const valChk = value => {
