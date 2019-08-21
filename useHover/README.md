@@ -24,3 +24,9 @@ function App() {
   return <h1 ref={markedRef}>Hello Nooks</h1>;
 }
 ```
+
+### Arguments
+
+| Argument | Type     | Description                | Required | Default value |
+| -------- | -------- | -------------------------- | -------- | ------------- |
+| onHover  | function | Function to use when hover | no       | NULL          |

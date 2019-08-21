@@ -16,11 +16,11 @@ React Hook to click event
 
 ```js
 import React from "react";
-import useClick from "@bhooks/use-click"
+import useClick from "@bhooks/use-click";
 
 const App = () => {
-  const sayHello = () => console.log("say Hello");
-  const title = useClick(sayHello);
+  const onClick = () => console.log("say Hello");
+  const title = useClick(onClick);
   return (
     <div>
       <h1 ref={title}>HI</h1>
@@ -28,3 +28,9 @@ const App = () => {
   );
 };
 ```
+
+### Arguments
+
+| Argument | Type     | Description                | Required | Default value |
+| -------- | -------- | -------------------------- | -------- | ------------- |
+| onClick  | function | Function to use when click | no       | NULL          |

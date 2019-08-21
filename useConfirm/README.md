@@ -3,6 +3,7 @@
 React Hook to confirm event
 
 ### install
+
 ```
 npm i @bhooks/use-confirm
 
@@ -18,9 +19,10 @@ import React from "react";
 import useConfirm from "@bhooks/use-confirm";
 
 const App = () => {
-  const deleteWorld = () => console.log("Deleting the word");
-  const abort = () => console.log("Aborted"); 
-  const confirmDelete = useConfirm("Are you sure", deleteWorld, abort);
+  const onConfirm = () => console.log("Deleting the word");
+  const onCancel = () => console.log("Aborted");
+  const message = "Are you sure";
+  const confirmDelete = useConfirm(message, onConfirm, onCancel);
 
   return (
     <div className="App">
@@ -28,5 +30,12 @@ const App = () => {
     </div>
   );
 };
-
 ```
+
+### Arguments
+
+| Argument  | Type     | Description                      | Required | Default value |
+| --------- | -------- | -------------------------------- | -------- | ------------- |
+| message   | string   | Message to be used in Confirm    | no       | ""            |
+| onConfirm | function | Function to be run after Confirm | no       | NULL          |
+| onCancel  | function | Function to be run after cancel  | no       | NULL          |

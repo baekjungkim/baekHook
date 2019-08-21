@@ -15,10 +15,11 @@ React Hook to check input validation
 ## usage
 
 ```js
-import useInput from "@bhooks/use-input"
+import React from "react";
+import useInput from "@bhooks/use-input";
 
 const App = () => {
-  const valChk = value => {
+  const validator = value => {
     let chk = true;
     if (value.length > 10) {
       return (chk = false);
@@ -27,7 +28,10 @@ const App = () => {
     }
     return chk;
   };
-  const name = useInput("", valChk);
+
+  const initialValue = "";
+
+  const name = useInput("", validator);
   return (
     <div className="App">
       <h1>Hello</h1>
@@ -36,3 +40,10 @@ const App = () => {
   );
 };
 ```
+
+### Arguments
+
+| Argument     | Type     | Description                  | Required | Default value |
+| ------------ | -------- | ---------------------------- | -------- | ------------- |
+| initialValue | string   | Initial value to enter input | yes      | ""            |
+| validator    | function | Input verification function  | no       | NULL          |

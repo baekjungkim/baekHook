@@ -15,9 +15,10 @@ React Hook to easy tab use
 ## usage
 
 ```js
-import useTabs from "@bhooks/use-tabs"
+import React from "react";
+import useTabs from "@bhooks/use-tabs";
 
-const content = [
+const allTabs = [
   {
     tab: "Section 1",
     content: "I'm the first content of the Section 1"
@@ -29,7 +30,8 @@ const content = [
 ];
 
 const App = () => {
-  const { currentItem, changeItem } = useTabs(0, content);
+  const initialTab = 0;
+  const { currentItem, changeItem } = useTabs(initialTab, allTabs);
   return (
     <div className="App">
       {content.map((section, index) => (
@@ -40,3 +42,10 @@ const App = () => {
   );
 };
 ```
+
+### Arguments
+
+| Argument   | Type   | Description          | Required | Default value |
+| ---------- | ------ | -------------------- | -------- | ------------- |
+| initialTab | number | Initial value to tab | no       | 0             |
+| allTabs    | array  | Contents of the tab  | no       | NULL          |

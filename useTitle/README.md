@@ -19,7 +19,14 @@ import React from "react";
 import useTitle from "@bhooks/use-title";
 
 function App() {
-  useTitle("Welcome");
+  const initialTitle = "Welcome";
+  useTitle(initialTitle);
   return <h1>Welcome</h1>;
 }
 ```
+
+### Arguments
+
+| Argument     | Type   | Description            | Required | Default value |
+| ------------ | ------ | ---------------------- | -------- | ------------- |
+| initialTitle | string | Initial value to Title | no       | ""            |
